@@ -1,0 +1,28 @@
+ID,Category,Gesture,Material,Feeling,Answer
+221,Neutral,Tap,1,accuracy,3
+221,Neutral,Tap,1,comfort,3
+221,Neutral,Tap,1,responsivity,3
+221,Neutral,Press,1,accuracy,3
+221,Neutral,Press,1,comfort,3
+221,Neutral,Press,1,responsivity,3
+221,Neutral,Slider,1,accuracy,3
+221,Neutral,Slider,1,comfort,3
+221,Neutral,Slider,1,responsivity,3
+221,Agree,Tap,2,accuracy,4
+221,Agree,Tap,2,comfort,4
+221,Strongly Agree,Tap,2,responsivity,5
+221,Agree,Press,2,accuracy,4
+221,Agree,Press,2,comfort,4
+221,Strongly Agree,Press,2,responsivity,5
+221,Agree,Slider,2,accuracy,4
+221,Agree,Slider,2,comfort,4
+221,Strongly Agree,Slider,2,responsivity,5
+221,Strongly Disagree,Tap,3,accuracy,1
+221,Strongly Disagree,Tap,3,comfort,1
+221,Strongly Disagree,Tap,3,responsivity,1
+221,Strongly Disagree,Press,3,accuracy,1
+221,Strongly Disagree,Press,3,comfort,1
+221,Strongly Disagree,Press,3,responsivity,1
+221,Strongly Disagree,Slider,3,accuracy,1
+221,Strongly Disagree,Slider,3,comfort,1
+221,Strongly Disagree,Slider,3,responsivity,1

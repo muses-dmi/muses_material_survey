@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="assets/css/steven.css">
+		
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../muses_material_survey/assets/css/muses-hightlight.css">
+		<!-- link rel="stylesheet" href="build/styles/darkula.min.css" -->
+
+		<!-- script src="assets/js/snap.svg-min.js"></script -->
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<!-- The following enable the themes border-->
+		<div class="line top"></div>
+		<div class="line bottom"></div>
+		<div class="line left"></div>
+		<div class="line right"></div>
+
+		<div class="reveal">
+			<div class="slides">
+				<section 
+					data-separator="^\n\n\n"
+					data-separator-vertical="^\n\n"
+					data-separator-notes="^Note:"
+					data-charset="iso-8859-15"
+					data-background="assets/images/layout_graphic_action_script.svg">
+					<h3>MUSES: Co-design of Interfaces</h3>
+					<p>
+						Material Study 1
+					</p>
+					<div>
+						<button type="button" 
+							onclick="sendBegin()"> Begin </button> 
+					</div>
+				</section>
+
+				<section>
+					<h3>Consent</h3>
+					Your personal ID is <div id="consent-id">X</div>
+					<div>
+							<button type="button" 
+								onclick="sendConsent()"> Agree </button> 
+					</div>
+				</section>
+				
+				<section>
+					<h5>Please rate material</h5><h3 id="materialIndex">X</h3><h5>on the following attributes for the gesture:</h5>
+					<h3 id="gestureType">G</h3>
+					<div id="lgroup1" >
+					<ul class="likert">
+						<li> Accuracy:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <small style="vertical-align: middle; margin: 0px;">poor&nbsp;</small> </li>
+						<li><input type="radio" name="accuracy" value="1" /></li>
+						<li><input type="radio" name="accuracy" value="2" /></li>
+						<li><input type="radio" name="accuracy" value="3" /></li>
+						<li><input type="radio" name="accuracy" value="4" /></li>
+						<li><input type="radio" name="accuracy" value="5" /></li>
+						<li> <small style="vertical-align: middle; margin: 0px;" >&nbsp;excellent</small> </li>
+					</ul>
+					</div>
+					<div id="lgroup2">
+					<ul class="likert">
+						<li> Comfort:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <small style="vertical-align: middle; margin: 0px;">poor&nbsp;</small> </li>
+						<li><input type="radio" name="comfort" value="1" /></li>
+						<li><input type="radio" name="comfort" value="2" /></li>
+						<li><input type="radio" name="comfort" value="3" /></li>
+						<li><input type="radio" name="comfort" value="4" /></li>
+						<li><input type="radio" name="comfort" value="5" /></li>
+						<li> <small style="vertical-align: middle; margin: 0px;" >&nbsp;excellent</small> </li>
+					</ul>
+					</div>
+					<div id="lgroup3">
+					<ul class="likert">
+						<li> Responsivity:&nbsp <small style="vertical-align: middle; margin: 0px;">poor&nbsp;</small> </li>
+						<li><input type="radio" name="responsivity" value="1" /></li>
+						<li><input type="radio" name="responsivity" value="2" /></li>
+						<li><input type="radio" name="responsivity" value="3" /></li>
+						<li><input type="radio" name="responsivity" value="4" /></li>
+						<li><input type="radio" name="responsivity" value="5" /></li>
+						<li> <small style="vertical-align: middle; margin: 0px;" >&nbsp;excellent</small> </li>
+					</ul>
+					</div>
+
+					<div>
+						<button type="button" 
+							onclick="submitRadios('accuracy','comfort','responsivity')"> Submit </button> 
+					</div>
+					
+					<script> 
+							
+					</script> 
+				</section>
+
+				<section>
+					<h3>Apply Pressure to fill the circle</h3>
+					<div>
+						<canvas id="pressCanvas"></canvas>
+					</div>
+					<h3>Material <span id="materialIndexPress">X</span></h3>
+				</section>
+
+				<section>
+					<h3>Please touch the material you felt was the most accurate</h3>
+				</section>
+			
+				<section>
+					<h3>Please touch the material you felt was the most comfortable to use</h3>
+				</section>
+
+				<section>
+					<h3>Please touch the material you felt was the most responsive</h3>
+				</section>
+
+				<section>
+					<h3>Please order the materials according to your preferences</h3>
+					<p>Start by Touching your favorite and work to your least favorite...</p>
+				</section>
+
+				<section>
+						<h4>Slide to stay in the highlighted area</h4>
+						<div>
+							<canvas id="sliderCanvas"></canvas>
+						</div>
+						<h3>Material <span id="materialIndexSlider">X</span></h3>
+				</section>
+
+				<section>
+						<h4>Tap when arrow directly pointing at circle</h4>
+						<div>
+							<canvas id="tapCanvas"></canvas>
+						</div>
+						<h3>Material <span id="materialIndexTap">X</span></h3>
+				</section>
+
+				<section>
+					More information @project site
+					<p>
+						<a href="https://muses-dmi.github.io/">
+							<img 
+								class="plain"
+								src="assets/images/2226 Muses Text Logo.svg" 
+								alt="muses" 
+								style="background:none; border:none;"
+								width="50%" />
+						</a>
+					</p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="../js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../plugin/markdown/marked.js' },
+					{ src: '../plugin/markdown/markdown.js' },
+					{ src: '../plugin/notes/notes.js', async: true },
+					{ src: '../plugin/highlight/highlight.js', callback: function() { hljs.initHighlightingOnLoad();} },
+					{ src: '../build/languages/haskell.min.js' },
+					{ src: 'assets/js/muses_survey.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
